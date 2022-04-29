@@ -22,22 +22,22 @@ const OrderReview = ({ shippingOption }) => {
   return (
     <Paper className={classes.paper} variant="outlined">
       <Typography variant="h6" align="center" className={classes.title}>
-        Order summary
+        Итог заказа
       </Typography>
       <List disablePadding>
         {cart.map(({ id, title, qty, price }) => (
           <ListItem className={classes.productItem} key={id}>
-            <ListItemText primary={title} secondary={`Quantity: ${qty}`} />
+            <ListItemText primary={title} secondary={`Кол-во: ${qty}`} />
             <Typography variant="body1">
               {(qty * price).toFixed(2)} €
             </Typography>
           </ListItem>
         ))}
         <ListItem className={classes.total}>
-          <ListItemText primary="Total:" secondary={`${amount} items`} />
+          <ListItemText primary="Итого:" secondary={`${amount} товаров`} />
           <ListItemText
             primary={`${(totalPrice + shippingOption).toFixed(2)} €`}
-            secondary={`${shippingOption} € delivery fee included`}
+            secondary={`${shippingOption} € стоимость доставки включена`}
             align="right"
           />
         </ListItem>

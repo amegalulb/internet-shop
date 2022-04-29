@@ -23,7 +23,7 @@ const BillingReview = ({
   const billingListItems = [
     {
       id: 0,
-      label: 'Full name:',
+      label: 'Полное имя:',
       value: `${firstName} ${lastName}`,
     },
     {
@@ -33,12 +33,12 @@ const BillingReview = ({
     },
     {
       id: 2,
-      label: 'Address:',
+      label: 'Адрес:',
       value: `${address}, ${city}, ${country}`,
     },
     {
       id: 3,
-      label: 'Shipping method:',
+      label: 'Метод доставки',
       value: `${shippingMethodText(shippingOption)} ${shippingOption} €`,
     },
   ];
@@ -47,15 +47,14 @@ const BillingReview = ({
     <Paper className={classes.paper} variant="outlined">
       <Typography
         variant="h6"
-        // gutterBottom
         align="center"
         className={classes.title}
       >
-        Step 2: Review and confirmation
+        Шаг 2. Проверка и подтверждение
       </Typography>
       <Divider />
       <Typography variant="h6" align="center" className={classes.subTitle}>
-        Billing summary
+        Сводка платежных данных
       </Typography>
       <List disablePadding>
         {billingListItems.map(({ id, label, value }) => (

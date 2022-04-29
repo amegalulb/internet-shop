@@ -22,7 +22,7 @@ const SortSelect = ({
       <InputLabel htmlFor="select-sort">Sort</InputLabel>
       <Select
         native
-        label="Sort"
+        label="Сортировать"
         value={sortStatus}
         onChange={handleChange}
         inputProps={{

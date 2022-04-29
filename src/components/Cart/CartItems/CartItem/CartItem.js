@@ -40,7 +40,7 @@ const CartItem = memo(({ id, image, title, price, qty }) => {
         </Typography>
       </CardContent>
       <CardContent className={classes.priceContainer}>
-        <Typography variant="h6">Total price:</Typography>
+        <Typography variant="h6">Итоговая цена:</Typography>
         <Typography
           className={classes.priceNumber}
           variant="h6"
@@ -50,9 +50,9 @@ const CartItem = memo(({ id, image, title, price, qty }) => {
         </Typography>
       </CardContent>
       <CardActions className={classes.cardActions}>
-        <Typography variant="h6">Quantity:</Typography>
+        <Typography variant="h6">Кол-во:</Typography>
         <div className={classes.rightBtns}>
-          <CustomTooltip title="Remove one item from cart">
+          <CustomTooltip title="Удалить один товар из корзины">
             <Button
               type="button"
               onClick={() => dispatch(allActions.cartActions.decrease(id))}
@@ -69,7 +69,7 @@ const CartItem = memo(({ id, image, title, price, qty }) => {
           <Typography variant="h6" component="p">
             <strong>{qty}</strong>
           </Typography>
-          <CustomTooltip title="Add one additional item to cart">
+          <CustomTooltip title="Добавьте один дополнительный товар в корзину">
             <Button
               type="button"
               variant="outlined"
@@ -94,7 +94,7 @@ const CartItem = memo(({ id, image, title, price, qty }) => {
         size="large"
         fullWidth
       >
-        Remove
+        Удалить
       </Button>
       {showModal && (
         <Modal showModal={showModal} setShowModal={setShowModal} img={image} />

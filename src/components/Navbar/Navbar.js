@@ -25,7 +25,6 @@ const Navbar = () => {
     history.goBack();
   };
 
-  // timer
   return (
     <AppBar position="sticky" className={classes.appBar} color="inherit">
       <Toolbar className={classes.toolbar}>
@@ -38,7 +37,7 @@ const Navbar = () => {
             color="inherit"
           >
             <Shop color="primary" />
-            E-Shop
+            E-shop
           </Typography>
         </CustomTooltip>
         {pathname === '/' ? (
@@ -54,10 +53,9 @@ const Navbar = () => {
             title="Go back"
             size="medium"
           >
-            Go Back
+            Назад
           </Button>
         )}
-        {/* <NavList /> */}
         <div className={classes.button}>
           <CustomTooltip title="Show cart items">
             <IconButton

@@ -37,15 +37,15 @@ const Modal = ({ showModal, setShowModal, img }) => {
   return (
     <section className={classes.modal} onClick={handleClick}>
       <div ref={modalRef} className={classes.modalContent}>
-        <img src={img} className={classes.image} alt="Product in larger size" />
-        <CustomTooltip title="Close modal">
+        <img src={img} className={classes.image} alt="Товар большего размера" />
+        <CustomTooltip title="Закрыть окно">
           <IconButton
             type="button"
             variant="outlined"
             color="secondary"
             onClick={() => setShowModal(false)}
             className={classes.modalBtn}
-            aria-label="Close modal"
+            aria-label="Закрыть окно"
           >
             <CloseIcon />
           </IconButton>

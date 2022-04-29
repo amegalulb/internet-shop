@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { BillingForm, Confirmation, Steps, Successful } from '../../components';
 import useStyles from './styles';
 
-const steps = ['Billing information', 'Review and confirmation'];
+const steps = ['Платежная информация', 'Просмотр и подтверждение'];
 
 const selectPrice = (state) => state.cart.totalPrice;
 
@@ -77,7 +77,7 @@ const Checkout = () => {
             className={classes.backButton}
             size="large"
           >
-            Back
+            Назад
           </Button>
           <Button
             variant="contained"
@@ -87,7 +87,7 @@ const Checkout = () => {
             endIcon={<ArrowForwardIcon />}
             size="large"
           >
-            Pay {(totalPrice + shippingOption).toFixed(2)} €
+            Оплатить {(totalPrice + shippingOption).toFixed(2)} €
           </Button>
         </div>
       )}

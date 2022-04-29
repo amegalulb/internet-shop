@@ -37,11 +37,10 @@ const PriceSlider = memo(
       },
     ];
 
-    // custom label € märgiga
     return (
       <div className={classes.root}>
         <Typography id="range-slider" align="center" gutterBottom>
-          Choose price range:
+          Выберете диапазон цен
         </Typography>
         <Slider
           className={classes.slider}

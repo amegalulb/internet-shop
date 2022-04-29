@@ -39,7 +39,7 @@ const BillingForm = memo(
           align="center"
           style={{ marginBottom: '0.8em' }}
         >
-          Step 1: Select billing information...
+          Шаг 1. Выберите платежную информацию...
         </Typography>
         <FormProvider {...methods}>
           <form onSubmit={handleSubmit(handleForm)}>
@@ -52,19 +52,19 @@ const BillingForm = memo(
               </Grid>
               <Grid item xs={12}>
                 <FormControl variant="outlined" fullWidth size="medium">
-                  <InputLabel htmlFor="select-delivery">Delivery</InputLabel>
+                  <InputLabel htmlFor="select-delivery">Доставка</InputLabel>
                   <Select
                     native
                     id="select-delivery"
-                    label="Delivery"
+                    label="Доставка"
                     value={shippingOption}
                     onChange={(e) => setShippingOption(+e.target.value)}
                   >
                     <option value={5}>
-                      Standard (up to 7 days)&nbsp; +5 €{' '}
+                        Стандартная (до 7 дней)&nbsp; +5 €{' '}
                     </option>
                     <option value={10}>
-                      Express&nbsp;&nbsp;&nbsp;(up to 3 days)&nbsp; +10 €
+                      Экспресс&nbsp;&nbsp;&nbsp;(до 3 дней)&nbsp; +10 €
                     </option>
                   </Select>
                 </FormControl>
@@ -79,14 +79,12 @@ const BillingForm = memo(
                   onClick={handleClick}
                   size="large"
                   type="button"
-                  // variant="contained"
-                  // color="primary"
                   startIcon={<ArrowBackIcon />}
-                  aria-label="Go back"
-                  title="Go back"
+                  aria-label="Вернуться"
+                  title="Вернуться"
                   className={classes.backButton}
                 >
-                  Back
+                  Назад
                 </Button>
                 <Button
                   variant="contained"
@@ -95,7 +93,7 @@ const BillingForm = memo(
                   size="large"
                   endIcon={<ArrowForwardIcon />}
                 >
-                  Next
+                  Далее
                 </Button>
               </Grid>
             </Grid>

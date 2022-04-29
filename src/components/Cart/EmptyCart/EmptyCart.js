@@ -9,7 +9,7 @@ const EmptyCart = () => {
   return (
     <Paper elevation={2} className={classes.paper}>
       <Typography variant="h6" component="p">
-        You have no items in your shopping cart!
+          У вас нет товаров в корзине!
       </Typography>
       <Button
         component={Link}
@@ -22,7 +22,7 @@ const EmptyCart = () => {
         aria-label="Go to products page"
         className={classes.link}
       >
-        Start adding some!
+        Начните добавлять!
       </Button>
     </Paper>
   );

@@ -46,7 +46,6 @@ const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [maxRange, setMaxRange] = useState(20);
 
-  // filter products
   const filterByPrice = useCallback(() => {
     const filteredListCategory = products.filter(
       ({ price, category }) =>
@@ -68,7 +67,6 @@ const Products = () => {
     localStorage.setItem('range', JSON.stringify(filterPrice));
   }, [products, filterPrice, selectedCategory, filterByPrice]);
 
-  // sort products
   useEffect(() => {
     switch (sortStatus) {
       case 'highLow':
@@ -91,18 +89,15 @@ const Products = () => {
     }
   }, [sortStatus, selectedCategory]);
 
-  // query
   const queryMatch = (product) =>
     product.title.toLowerCase().includes(query.toLowerCase());
 
   const arrayQueryLength = filteredProducts.filter((item) => queryMatch(item))
     .length;
 
-  // max min
   const minPrice = Math.min(...products.map(getPrice));
   const maxPrice = Math.max(...products.map(getPrice));
 
-  // show more button
   const showMoreProducts = useCallback(() => {
     setMaxRange((prevRange) => prevRange + 10);
   }, []);
@@ -164,10 +159,10 @@ const Products = () => {
           variant="contained"
           color="primary"
           onClick={showMoreProducts}
-          aria-label="Show more"
+          aria-label="Показать ещё"
           disabled={maxRange >= filteredProducts.length}
         >
-          Show More
+          Показать ещё
         </Button>
       )}
       <ScrollTop>
@@ -175,7 +170,7 @@ const Products = () => {
           color="secondary"
           size="small"
           aria-label="scroll back to top"
-          title="Scroll back to top"
+          title="Поднять вверх"
         >
           <KeyboardArrowUpIcon />
         </Fab>

@@ -38,7 +38,7 @@ const Error = () => {
     >
       <Paper elevation={2} className={classes.paper}>
         <Typography variant="h5" component="p">
-          Sorry, no matching page!
+          Извините, нет подходящей страницы!
         </Typography>
         <Button
           onClick={handleClick}
@@ -49,7 +49,7 @@ const Error = () => {
           startIcon={<ArrowBack />}
           aria-label="Go back"
         >
-          Go back
+          Вернуться назад
         </Button>
       </Paper>
     </Grid>

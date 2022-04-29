@@ -15,7 +15,7 @@ const Successful = memo(({ handleReset, isFinished }) => {
       ) : (
         <Paper variant="outlined" className={classes.paper}>
           <Typography variant="h6" gutterBottom>
-            Thank you for you purchase!
+            Спасибо за покупку!
           </Typography>
           <Button
             component={Link}
@@ -28,7 +28,7 @@ const Successful = memo(({ handleReset, isFinished }) => {
             startIcon={<Home />}
             onClick={handleReset}
           >
-            Back to homepage
+            Вернуться на главную
           </Button>
         </Paper>
       )}

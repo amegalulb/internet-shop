@@ -5,7 +5,7 @@ import { ScrollTop } from '../../components';
 import { CartItems, EmptyCart } from '../Cart';
 import useStyles from './styles';
 
-const amountText = (amount) => (amount === 1 ? 'item' : 'items');
+const amountText = (amount) => (amount === 1 ? 'товар' : 'товаров');
 const selectAmount = (state) => state.cart.amount;
 const selectCart = (state) => state.cart.cart;
 
@@ -23,7 +23,7 @@ const Cart = () => {
         className={classes.titleContainer}
       >
         <Typography className={classes.title} variant="h4">
-          Your Shopping Cart {}
+          Ваша Корзина
           <Typography
             variant="button"
             component="span"
@@ -38,8 +38,6 @@ const Cart = () => {
         <Fab
           color="secondary"
           size="small"
-          aria-label="Scroll back to top"
-          title="Scroll back to top"
         >
           <KeyboardArrowUpIcon />
         </Fab>

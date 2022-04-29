@@ -52,8 +52,8 @@ const Product = ({ id, title, price, description, category, image, qty }) => {
                 aria-controls="panel1d-content"
                 id="panel1d-header"
                 expandIcon={<ExpandMoreIcon />}
-                aria-label="Toggle product description"
-                title="Click to toggle description"
+                aria-label="Открыть/закрыть описание продукта"
+                title="Нажмите, чтобы раскрыть описание"
               >
                 <Typography variant="h6" component="h2">
                   {title}
@@ -79,7 +79,6 @@ const Product = ({ id, title, price, description, category, image, qty }) => {
               gutterBottom
               variant="overline"
               component="p"
-              // align="left"
               color="textPrimary"
             >
               {category}
@@ -90,7 +89,6 @@ const Product = ({ id, title, price, description, category, image, qty }) => {
               gutterBottom
               variant="h6"
               component="h3"
-              // align="right"
               className={classes.price}
               title={price.toFixed(2)}
             >
@@ -102,7 +100,7 @@ const Product = ({ id, title, price, description, category, image, qty }) => {
       </CardContent>
       <CardActions disableSpacing className={classes.cardActions}>
         <IconButton
-          aria-label="Add to Cart"
+          aria-label="Добавить в корзину"
           onClick={() =>
             dispatch(
               allActions.cartActions.addToCart(
@@ -118,7 +116,7 @@ const Product = ({ id, title, price, description, category, image, qty }) => {
           }
         >
           <Typography variant="button" display="block" color="textPrimary">
-            Add to cart
+            Добавить в корзину
           </Typography>
           <AddShoppingCart />
         </IconButton>

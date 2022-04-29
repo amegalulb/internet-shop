@@ -33,7 +33,7 @@ const CartItems = () => {
           align="center"
           title={totalPrice}
         >
-          Subtotal: <strong>{totalPrice}&nbsp;€</strong>
+          Промежуточный итог: <strong>{totalPrice}&nbsp;€</strong>
         </Typography>
         <Grid
           container
@@ -50,7 +50,7 @@ const CartItems = () => {
             startIcon={<DeleteIcon />}
             aria-label="Clear the cart"
           >
-            Empty cart
+            Очистить корзину
           </Button>
           <Button
             component={Link}
@@ -62,7 +62,7 @@ const CartItems = () => {
             startIcon={<NextWeekIcon />}
             aria-label="Proceed to checkout"
           >
-            Checkout
+            Оформить
           </Button>
         </Grid>
       </div>

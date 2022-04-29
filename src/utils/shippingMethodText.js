@@ -1,11 +1,11 @@
 const shippingMethodText = (value) => {
   switch (value) {
     case 5:
-      return 'Standard';
+      return 'Стандартная';
     case 10:
-      return 'Express';
+      return 'Экспресс';
     default:
-      return 'Standard';
+      return 'Стандартная';
   }
 };
 
